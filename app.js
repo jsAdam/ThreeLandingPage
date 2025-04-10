@@ -5,9 +5,11 @@ const path = require("path");
 
 app.use(morgan("tiny"));
 
-app.use(express.static(__dirname + "/public"));
-app.use("/build", express.static(path.join(__dirname, "node_modules/three/build")));
-app.use("/jsm", express.static(path.join(__dirname, "node_modules/three/examples/jsm")));
+app.use(express.static(path.join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/index.html"));
+});
 
 app.listen(3000, function() {
     console.log("Listening on port 3000!");

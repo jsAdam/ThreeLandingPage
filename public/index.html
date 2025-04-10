@@ -28,6 +28,10 @@
                 letter-spacing: 40px;
                 text-align: center;
                 font-size: 80px;
+                -webkit-user-select: none; /* Safari */        
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+/Edge */
+                user-select: none; /* Standard */
             }
             
             #videoBackground {
@@ -61,7 +65,6 @@
             }
         </script>
         
-        <script type="module" src="helper.js"></script>
-        <script type="module" src="script.js"></script>
+        <script type="module" src="bundle.js"></script>
     </body>
 </html>

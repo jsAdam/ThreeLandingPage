@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve --open --hot",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +13,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.0",
     "express": "^4.17.1",
+    "html-webpack-plugin": "^5.6.3",
     "morgan": "^1.10.0",
     "postprocessing": "^6.18.0",
-    "three": "^0.122.0"
+    "three": "^0.122.0",
+    "webpack": "^5.99.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-middleware": "^7.4.2",
+    "webpack-node-externals": "^3.0.0"
   }
 }
